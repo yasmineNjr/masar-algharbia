@@ -22,9 +22,7 @@ const PopularHotels = () => {
 
   return (
     <section className={`flex md:flex-row flex-col ${styles.paddingY}`}>
-      
-
-      <div className={layout.sectionInfo}>
+      <div className={`${layout.sectionInfo} md:order-2 order-1`}>
         <h2 className={styles.heading2}>
             الفنادق الأكثر طلباً
         </h2>
@@ -38,7 +36,7 @@ const PopularHotels = () => {
         </div>
       </div>
       
-      <div className={`${layout.sectionImg} lg:w-[50%] w-[100%]`}>
+      <div className={`${layout.sectionImg} lg:w-[50%] w-[100%] md:order-1 order-2`}>
         <div className="flex flex-row overflow-x-scroll no-scrollbar overflow-auto" ref={scrollRef}>
           {hotels.map((hotel, index) => (
             <div className={`relative min-w-[301px] h-[370px]  ${index !== hotel.length-1 ? 'ml-6' : 'ml-0'} flex justify-center items-center`} key={`gallery_image-${index + 1}`}>
